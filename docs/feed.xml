@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Alan Rynne</title>
+    <description>Welcome to my personal webpage!</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 05 Oct 2018 23:04:06 +0200</pubDate>
+    <lastBuildDate>Fri, 05 Oct 2018 23:04:06 +0200</lastBuildDate>
+    <generator>Jekyll v3.8.4</generator>
+    
+      <item>
+        <title>Surfaces vs. Meshes</title>
+        <description>&lt;p&gt;So… in this post, I will try to introduce some very useful concepts that are widely used in &lt;em&gt;Architectural Geometry&lt;/em&gt;, but that are &lt;em&gt;borrowed&lt;/em&gt; from other disciplines like Aeronautical Engineering and, lately, Computer Graphics.&lt;/p&gt; &lt;p&gt;Most of these techniques are extremely useful for architectural purposes, specially in recent years, when the use of 3D Modeling CAD programs has become widespread in Architecture practices.&lt;/p&gt; &lt;p&gt;These new modeling capabilities come with some shortcomings as, most of the time, the initially designed surfaces do not meet the projects requirements, leading to solutions that are not easily built or go way above budget. Hence, the...</description>
+        <pubDate>Sat, 29 Sep 2018 00:00:00 +0200</pubDate>
+        <link>http://localhost:4000/blog/surf-mesh/</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/surf-mesh/</guid>
+        
+        <category>jekyll</category>
+        
+        <category>template</category>
+        
+        
+        <category>General</category>
+        
+      </item>
+    
+      <item>
+        <title>Hello!</title>
+        <description>&lt;h1 id=&quot;welcome&quot;&gt;Welcome!&lt;/h1&gt; &lt;p&gt;So… again, welcome to my new website. My name is Alan Rynne, I am an Architectural Engineer &amp;amp; Computational Specialist with a &lt;strong&gt;BIG&lt;/strong&gt; crush on efficiency, not only on the design phase (structural behaviour, constructability) but also concerned on how to improve our workflows in the AEC industry.&lt;/p&gt; &lt;p&gt;In this blog I will be writing about many topics that I &lt;strong&gt;&lt;em&gt;LOVE&lt;/em&gt;&lt;/strong&gt;, mainly centered in:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Architectural Design&lt;/li&gt; &lt;li&gt;Programming&lt;/li&gt; &lt;li&gt;Architectural Geometry&lt;/li&gt; &lt;li&gt;Technological Improvements in Architecture&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;although other less serious topics might be introduced too! I will also try to introduce some guides for useful tools &amp;amp; workflows that...</description>
+        <pubDate>Mon, 03 Aug 2015 05:32:44 +0200</pubDate>
+        <link>http://localhost:4000/blog/hello/</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/hello/</guid>
+        
+        <category>jekyll</category>
+        
+        <category>template</category>
+        
+        
+        <category>General</category>
+        
+      </item>
+    
+  </channel>
+</rss>
