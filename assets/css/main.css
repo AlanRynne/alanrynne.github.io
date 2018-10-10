@@ -2,7 +2,7 @@
 
 #assetsimgtriangular-gridshell-inside-andres-flajszerjpg {
     background-color: rgba(0,0,0,0.3); 
-    background-image: url(http://alanrynne.github.io/assets/img/triangular-gridshell-inside-Andres-Flajszer.jpg) !important; 
+    background-image: url(http://localhost:4000/assets/img/triangular-gridshell-inside-Andres-Flajszer.jpg) !important; 
     background-size: cover;
     background-blend-mode: multiply;
     background-position: center;
@@ -16,7 +16,7 @@
 
 #assetsimgtriangular-gridshell-outside-andres-flajszerjpg {
     background-color: rgba(0,0,0,0.3); 
-    background-image: url(http://alanrynne.github.io/assets/img/triangular-gridshell-outside-Andres-Flajszer.jpg) !important; 
+    background-image: url(http://localhost:4000/assets/img/triangular-gridshell-outside-Andres-Flajszer.jpg) !important; 
     background-size: cover;
     background-blend-mode: multiply;
     background-position: center;
@@ -34,7 +34,7 @@
 
 #assetsimgleeferreljpg { 
     background-color: rgba(0,0,0,0.3);
-    background-image: url(http://alanrynne.github.io/assets/img/leeFerrel.jpg) !important; 
+    background-image: url(http://localhost:4000/assets/img/leeFerrel.jpg) !important; 
     background-size: cover;
     background-blend-mode: multiply;
     background-position: center;
@@ -51,9 +51,9 @@
 /* ----- Per-project background!! Using 'bg' in YAML----- */
 
 
-#assetsimgleeferreljpg {
+#assetsimgtriangular-gridshell-outside-2-andres-flajszerjpg {
     background-color: rgba(0,0,0,0.3);
-    background-image: url(http://alanrynne.github.io/assets/img/leeFerrel.jpg) !important;
+    background-image: url(http://localhost:4000/assets/img/triangular-gridshell-outside-2-Andres-Flajszer.jpg) !important;
     background-size: cover;
     background-blend-mode: multiply;
     background-position: center;
@@ -68,22 +68,7 @@
 
 #assetsimgtriangular-gridshell-outside-2-andres-flajszerjpg {
     background-color: rgba(0,0,0,0.3);
-    background-image: url(http://alanrynne.github.io/assets/img/triangular-gridshell-outside-2-Andres-Flajszer.jpg) !important;
-    background-size: cover;
-    background-blend-mode: multiply;
-    background-position: center;
-    height: 100%; 
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    box-shadow: 
-        inset 0px -11px 40px -10px #000000;
-}
-
-
-#assetsimgtriangular-gridshell-outside-2-andres-flajszerjpg {
-    background-color: rgba(0,0,0,0.3);
-    background-image: url(http://alanrynne.github.io/assets/img/triangular-gridshell-outside-2-Andres-Flajszer.jpg) !important;
+    background-image: url(http://localhost:4000/assets/img/triangular-gridshell-outside-2-Andres-Flajszer.jpg) !important;
     background-size: cover;
     background-blend-mode: multiply;
     background-position: center;
@@ -98,7 +83,7 @@
 
 #assetsimgleeferreljpg {
     background-color: rgba(0,0,0,0.3);
-    background-image: url(http://alanrynne.github.io/assets/img/leeFerrel.jpg) !important;
+    background-image: url(http://localhost:4000/assets/img/leeFerrel.jpg) !important;
     background-size: cover;
     background-blend-mode: multiply;
     background-position: center;
@@ -113,7 +98,7 @@
 
 #assetsimgleeferreljpg {
     background-color: rgba(0,0,0,0.3);
-    background-image: url(http://alanrynne.github.io/assets/img/leeFerrel.jpg) !important;
+    background-image: url(http://localhost:4000/assets/img/leeFerrel.jpg) !important;
     background-size: cover;
     background-blend-mode: multiply;
     background-position: center;
@@ -2198,3 +2183,27 @@ button:hover{
       font-weight: lighter;
   }
 
+footer#particles-js{
+    position: relative;
+}
+
+footer#particles-js canvas
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100% !important;
+    width: 100% !important;
+}
+
+.header-post .content, .header-post .down{
+    z-index: 100 !important;
+}
+#three-div{
+    width: 100% !important;
+    height: 100% !important;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+}

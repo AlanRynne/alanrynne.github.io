@@ -3,10 +3,10 @@
 particlesJS("particles-js", {
     "particles": {
       "number": {
-        "value": 40,
+        "value": 20,
         "density": {
           "enable": true,
-          "value_area": 800
+          "value_area": 100
         }
       },
       "color": {
@@ -32,17 +32,17 @@ particlesJS("particles-js", {
         "random": false,
         "anim": {
           "enable": false,
-          "speed": 1,
+          "speed": 0.4,
           "opacity_min": 0.1,
           "sync": false
         }
       },
       "size": {
-        "value": 3,
+        "value": 2,
         "random": true,
         "anim": {
           "enable": false,
-          "speed": 40,
+          "speed": 10,
           "size_min": 0.1,
           "sync": false
         }
@@ -56,7 +56,7 @@ particlesJS("particles-js", {
       },
       "move": {
         "enable": true,
-        "speed": 6,
+        "speed": 3,
         "direction": "none",
         "random": false,
         "straight": false,
@@ -120,6 +120,8 @@ particlesJS("particles-js", {
   stats.domElement.style.position = 'absolute';
   stats.domElement.style.left = '0px';
   stats.domElement.style.top = '0px';
+  stats.domElement.style.width = '5em !important';
+  stats.domElement.style.height = '5em !important';
   document.body.appendChild(stats.domElement);
   count_particles = document.querySelector('.js-count-particles');
   update = function() {
