@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	
 	  <url>
-		<loc>http://localhost:4000/blog/surf-mesh/</loc>
+		<loc>http://alanrynne.github.io//blog/surf-mesh/</loc>
 	  </url>
 	
 	  <url>
-		<loc>http://localhost:4000/blog/hello/</loc>
+		<loc>http://alanrynne.github.io//blog/hello/</loc>
 	  </url>
 	
 </urlset>
