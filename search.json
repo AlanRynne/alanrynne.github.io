@@ -4,7 +4,7 @@
       "title"    : "Surfaces vs. Meshes",
       "category" : "General",
       "tags"     : "jekyll and template",
-      "url"      : "//blog/surf-mesh/",
+      "url"      : "/blog/surf-mesh/",
       "date"     : "29 Sep 2018"
     } ,
   
@@ -12,8 +12,9 @@
       "title"    : "Hello!",
       "category" : "General",
       "tags"     : "jekyll and template",
-      "url"      : "//blog/hello/",
+      "url"      : "/blog/hello/",
       "date"     : "03 Aug 2015"
     } 
+  
   
 ]
