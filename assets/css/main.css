@@ -51,6 +51,21 @@
 /* ----- Per-project background!! Using 'bg' in YAML----- */
 
 
+#assetsimgleeferreljpg {
+    background-color: rgba(0,0,0,0.3);
+    background-image: url(/assets/img/leeFerrel.jpg) !important;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-position: center;
+    height: 100%; 
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    box-shadow: 
+        inset 0px -11px 40px -10px #000000;
+}
+
+
 #assetsimgtriangular-gridshell-outside-2-andres-flajszerjpg {
     background-color: rgba(0,0,0,0.3);
     background-image: url(/assets/img/triangular-gridshell-outside-2-Andres-Flajszer.jpg) !important;
