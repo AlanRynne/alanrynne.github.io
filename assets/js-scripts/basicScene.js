@@ -12,7 +12,7 @@ var material = new THREE.MeshNormalMaterial();
 // load a resource
 loader.load(
 	// resource URL
-	'../assets/obj/QUAD.obj',
+	document.getElementById('three-div').getAttribute('obj'),
     // called when resource is loaded
     function(object){
 
