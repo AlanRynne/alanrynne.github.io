@@ -2,7 +2,7 @@
 
 #assetsimgtriangular-gridshell-inside-andres-flajszerjpg {
     background-color: rgba(0,0,0,0.3); 
-    background-image: url(http://alanrynne.github.io/assets/img/triangular-gridshell-inside-Andres-Flajszer.jpg) !important; 
+    background-image: url(http://localhost:4000/assets/img/triangular-gridshell-inside-Andres-Flajszer.jpg) !important; 
     background-size: cover;
     background-blend-mode: multiply;
     background-position: center;
@@ -16,7 +16,7 @@
 
 #assetsimgtriangular-gridshell-outside-andres-flajszerjpg {
     background-color: rgba(0,0,0,0.3); 
-    background-image: url(http://alanrynne.github.io/assets/img/triangular-gridshell-outside-Andres-Flajszer.jpg) !important; 
+    background-image: url(http://localhost:4000/assets/img/triangular-gridshell-outside-Andres-Flajszer.jpg) !important; 
     background-size: cover;
     background-blend-mode: multiply;
     background-position: center;
@@ -34,7 +34,7 @@
 
 #assetsimgleeferreljpg { 
     background-color: rgba(0,0,0,0.3);
-    background-image: url(http://alanrynne.github.io/assets/img/leeFerrel.jpg) !important; 
+    background-image: url(http://localhost:4000/assets/img/leeFerrel.jpg) !important; 
     background-size: cover;
     background-blend-mode: multiply;
     background-position: center;
@@ -53,7 +53,7 @@
 
 #assetsimgtriangular-gridshell-outside-2-andres-flajszerjpg {
     background-color: rgba(0,0,0,0.3);
-    background-image: url(http://alanrynne.github.io/assets/img/triangular-gridshell-outside-2-Andres-Flajszer.jpg) !important;
+    background-image: url(http://localhost:4000/assets/img/triangular-gridshell-outside-2-Andres-Flajszer.jpg) !important;
     background-size: cover;
     background-blend-mode: multiply;
     background-position: center;
@@ -68,7 +68,7 @@
 
 #assetsimgtriangular-gridshell-outside-2-andres-flajszerjpg {
     background-color: rgba(0,0,0,0.3);
-    background-image: url(http://alanrynne.github.io/assets/img/triangular-gridshell-outside-2-Andres-Flajszer.jpg) !important;
+    background-image: url(http://localhost:4000/assets/img/triangular-gridshell-outside-2-Andres-Flajszer.jpg) !important;
     background-size: cover;
     background-blend-mode: multiply;
     background-position: center;
@@ -83,7 +83,7 @@
 
 #assetsimgleeferreljpg {
     background-color: rgba(0,0,0,0.3);
-    background-image: url(http://alanrynne.github.io/assets/img/leeFerrel.jpg) !important;
+    background-image: url(http://localhost:4000/assets/img/leeFerrel.jpg) !important;
     background-size: cover;
     background-blend-mode: multiply;
     background-position: center;
@@ -98,7 +98,7 @@
 
 #assetsimgleeferreljpg {
     background-color: rgba(0,0,0,0.3);
-    background-image: url(http://alanrynne.github.io/assets/img/leeFerrel.jpg) !important;
+    background-image: url(http://localhost:4000/assets/img/leeFerrel.jpg) !important;
     background-size: cover;
     background-blend-mode: multiply;
     background-position: center;
@@ -2196,6 +2196,10 @@ footer#particles-js canvas
     width: 100% !important;
 }
 
+.header-post .content{
+    z-index: 100 !important;
+    user-select: none;
+}
 .header-post .content, .header-post .down{
     z-index: 100 !important;
 }
@@ -2206,4 +2210,9 @@ footer#particles-js canvas
     top: 0px;
     left: 0px;
     z-index: 0;
+    background: #EFEFBB;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #D4D3DD, #EFEFBB);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #D4D3DD, #EFEFBB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    box-shadow: 
+    inset 0px -11px 40px -10px #000000;
 }
