@@ -52,12 +52,13 @@ var pointLight = new THREE.PointLight( 0xffffff, 0.8 );
 				scene.add( camera );
 
 var controls = new THREE.TrackballControls( camera, renderer.domElement );
+controls.rotateCamera();
 controls.minDistance = 0.7;
 controls.maxDistance = 3;
-camera.position.z = 0.5;
-camera.position.x = 0;
-camera.position.y = 0;
-camera.fov = 120;
+controls.panSpeed = 0.4;
+camera.position.set( 0, 0, 0.5 );
+camera.fov = 20;
+controls.update();
 
 animate();
 
@@ -76,12 +77,14 @@ function init() {
     camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
 
     renderer = new THREE.WebGLRenderer({ alpha: true });
+    renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setSize( window.innerWidth, window.innerHeight);
     window.addEventListener( 'resize', onWindowResize, false );
 
     document.getElementById('three-div').appendChild( renderer.domElement )
 
 }
+
 
 function animate() {
     requestAnimationFrame( animate );

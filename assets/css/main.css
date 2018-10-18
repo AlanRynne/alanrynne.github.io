@@ -47,6 +47,21 @@
 
     }
 
+#assetsimg { 
+    background-color: rgba(0,0,0,0.3);
+    background-image: url(/assets/img/) !important; 
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-position: center;
+    height: 100%; 
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    box-shadow: 
+        inset 0px -11px 40px -10px #000000;
+
+    }
+
 
 /* ----- Per-project background!! Using 'bg' in YAML----- */
 
@@ -2202,12 +2217,12 @@ button:hover{
 
 }
 .header-post .content{
-    z-index: 100 !important;
+    z-index: 10 !important;
     user-select: none;
     pointer-events: none;
 }
 .header-post .content, .header-post .down{
-    z-index: 100 !important;
+    z-index: 10 !important;
 }
 #three-div{
     width: 100% !important;

@@ -1,0 +1,206 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="170.07mm" height="70mm" viewBox="0 0 482.087 198.425">
+  <defs>
+    <style>
+      .cls-1, .cls-11, .cls-15, .cls-3 {
+        fill: none;
+      }
+
+      .cls-2, .cls-5 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        stroke: #2a4d9c;
+      }
+
+      .cls-11, .cls-15, .cls-2, .cls-3, .cls-5 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-3 {
+        stroke: #3f82c4;
+      }
+
+      .cls-4 {
+        fill: #3f82c4;
+      }
+
+      .cls-5 {
+        stroke: #c91517;
+      }
+
+      .cls-6 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-7 {
+        opacity: 0.41;
+        fill: url(#Degradado_sin_nombre_105);
+      }
+
+      .cls-8 {
+        fill: #c91517;
+      }
+
+      .cls-9 {
+        fill: #b2b2b2;
+      }
+
+      .cls-10, .cls-12, .cls-13, .cls-14 {
+        fill: #1d1d1b;
+      }
+
+      .cls-11, .cls-15 {
+        stroke: #000;
+      }
+
+      .cls-11 {
+        stroke-width: 0.4px;
+      }
+
+      .cls-12, .cls-14 {
+        font-size: 12px;
+      }
+
+      .cls-12, .cls-13 {
+        font-family: TimesNewRomanPS-ItalicMT, Times New Roman;
+        font-style: italic;
+      }
+
+      .cls-13 {
+        font-size: 9px;
+      }
+
+      .cls-14 {
+        font-family: TimesNewRomanPS-BoldMT, Times New Roman;
+        font-weight: 700;
+      }
+
+      .cls-15 {
+        stroke-width: 0.25px;
+      }
+    </style>
+    <clipPath id="clip-path">
+      <polygon class="cls-1" points="366.306 84.03 353.849 48.101 329.684 65.899 331.257 96.182 366.306 84.03"/>
+    </clipPath>
+    <radialGradient id="Degradado_sin_nombre_105" data-name="Degradado sin nombre 105" cx="-66.834" cy="14.029" r="34.599" gradientTransform="matrix(0.9, 0.436, -0.436, 0.9, 432.762, 101.221)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#c1962b"/>
+      <stop offset="0.174" stop-color="#c1962b" stop-opacity="0.985"/>
+      <stop offset="0.3" stop-color="#c1962b" stop-opacity="0.937"/>
+      <stop offset="0.41" stop-color="#c1962b" stop-opacity="0.855"/>
+      <stop offset="0.511" stop-color="#c1962b" stop-opacity="0.74"/>
+      <stop offset="0.54" stop-color="#c1962b" stop-opacity="0.7"/>
+      <stop offset="0.609" stop-color="#c7a03f" stop-opacity="0.634"/>
+      <stop offset="0.735" stop-color="#d6ba74" stop-opacity="0.458"/>
+      <stop offset="0.904" stop-color="#efe4c9" stop-opacity="0.177"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <symbol id="Nuevo_símbolo" data-name="Nuevo símbolo" viewBox="0 0 6.869 6.869">
+      <polyline class="cls-3" points="0.5 6.869 0.5 0.5 6.869 0.5"/>
+      <circle class="cls-4" cx="3.685" cy="3.685" r="0.452"/>
+    </symbol>
+    <symbol id="Red_dot" data-name="Red dot" viewBox="0 0 5.201 5.201">
+      <circle class="cls-5" cx="2.601" cy="2.601" r="2.101"/>
+    </symbol>
+    <symbol id="Blue_Point" data-name="Blue Point" viewBox="0 0 5.201 5.201">
+      <circle class="cls-2" cx="2.601" cy="2.601" r="2.101"/>
+    </symbol>
+  </defs>
+  <title>Diagram-PieceWiseGeodesic</title>
+  <g id="Diagram_Piecewise_Geodesic" data-name="Diagram Piecewise  Geodesic">
+    <g id="Angle">
+      <g class="cls-6">
+        <circle class="cls-7" cx="366.507" cy="84.674" r="34.599"/>
+      </g>
+    </g>
+    <g id="Symbols">
+      <use width="6.869" height="6.869" transform="translate(252.986 123.087)" xlink:href="#Nuevo_símbolo"/>
+      <use width="6.869" height="6.869" transform="translate(300.689 126.591) rotate(8.63)" xlink:href="#Nuevo_símbolo"/>
+      <use width="6.869" height="6.869" transform="translate(347.041 134.865) rotate(11.908)" xlink:href="#Nuevo_símbolo"/>
+      <use width="6.869" height="6.869" transform="translate(392.692 146.823) rotate(18.228)" xlink:href="#Nuevo_símbolo"/>
+      <use width="6.869" height="6.869" transform="translate(205.989 124.897) rotate(-4.286)" xlink:href="#Nuevo_símbolo"/>
+      <use width="6.869" height="6.869" transform="translate(158.945 131.012) rotate(-8.623)" xlink:href="#Nuevo_símbolo"/>
+      <use width="6.869" height="6.869" transform="translate(112.542 141.181) rotate(-14.249)" xlink:href="#Nuevo_símbolo"/>
+    </g>
+    <g id="PerpGs">
+      <g>
+        <polygon class="cls-4" points="75.576 159.938 42.633 65.708 76.518 159.603 75.576 159.938"/>
+        <polygon class="cls-4" points="166.03 136.432 150.344 37.85 167.017 136.27 166.03 136.432"/>
+        <polygon class="cls-4" points="212.488 131.012 206.362 31.378 213.486 130.946 212.488 131.012"/>
+        <polygon class="cls-4" points="259.252 130.233 263.368 30.495 260.252 130.269 259.252 130.233"/>
+        <polygon class="cls-4" points="305.852 134.244 319.932 35.419 306.842 134.38 305.852 134.244"/>
+        <polygon class="cls-4" points="351.844 142.759 375.159 45.697 352.818 142.988 351.844 142.759"/>
+        <polygon class="cls-4" points="396.863 155.456 428.769 60.869 397.813 155.77 396.863 155.456"/>
+        <polygon class="cls-4" points="120.28 146.169 95.69 49.423 121.248 145.918 120.28 146.169"/>
+      </g>
+    </g>
+    <g id="StartV">
+      <g>
+        <path class="cls-8" d="M366.306,84.03l-78.96-35.616a.494.494,0,1,1,.406-.9l0,0Z"/>
+        <polygon class="cls-8" points="292.267 45.626 292.582 46.576 287.901 48.124 289.787 52.68 288.861 53.062 286.566 47.512 292.267 45.626"/>
+      </g>
+    </g>
+    <g id="NewG">
+      <g>
+        <path class="cls-9" d="M107.028,93.328a189.447,189.447,0,0,0-23.671,2.111l-2.939.44c-.978.156-1.944.379-2.917.565-1.94.4-3.888.76-5.821,1.191l-5.76,1.452c-1.927.461-3.8,1.119-5.7,1.668a141.375,141.375,0,0,0-21.989,8.876l-2.639,1.355-2.585,1.453c-1.742.937-3.391,2.029-5.085,3.047a96.268,96.268,0,0,0-9.554,6.972l-.006,0a.556.556,0,1,1-.716-.852l0,0a97.319,97.319,0,0,1,9.72-6.993c1.715-1.016,3.388-2.106,5.15-3.039l2.616-1.447,2.667-1.346A142.226,142.226,0,0,1,59.988,100c1.915-.539,3.8-1.188,5.74-1.637l5.8-1.42c1.943-.419,3.9-.768,5.853-1.155.978-.181,1.949-.4,2.932-.548l2.953-.422a190.091,190.091,0,0,1,23.756-1.955.232.232,0,0,1,.019.463Z"/>
+        <polygon class="cls-9" points="20.169 116.951 20.883 117.372 18.131 122.047 23.245 120.234 23.521 121.015 16.263 123.587 20.169 116.951"/>
+      </g>
+      <g>
+        <path class="cls-10" d="M366.209,84.24a196.253,196.253,0,0,0-31.223-10.78,308.613,308.613,0,0,0-32.42-6.519A412.072,412.072,0,0,0,236.6,62.7a356.88,356.88,0,0,0-65.706,6.789,237.284,237.284,0,0,0-31.843,8.728A152.306,152.306,0,0,0,109.288,92.3l0,0a.562.562,0,0,1-.6-.952h0A153.457,153.457,0,0,1,138.7,77.235a238.3,238.3,0,0,1,32-8.685,357.708,357.708,0,0,1,65.885-6.644,412.823,412.823,0,0,1,66.071,4.414,309.012,309.012,0,0,1,32.465,6.612A196.8,196.8,0,0,1,366.4,83.819a.232.232,0,1,1-.194.421Z"/>
+        <polygon class="cls-10" points="111.798 87.057 112.447 87.571 109.084 91.826 114.395 90.728 114.563 91.539 107.024 93.097 111.798 87.057"/>
+      </g>
+      <g>
+        <path class="cls-9" d="M366.334,83.8a251.856,251.856,0,0,1,24.951,4.344c4.139.852,8.193,2.057,12.28,3.126,4.035,1.252,8.09,2.446,12.055,3.915a185.479,185.479,0,0,1,23.266,10.059A132.135,132.135,0,0,1,460.3,118.855a.557.557,0,1,1-.694.871l0,0-.008-.006a131.1,131.1,0,0,0-21.152-13.631,184.562,184.562,0,0,0-23.091-10.16c-3.94-1.488-7.973-2.7-11.987-3.979-4.066-1.091-8.1-2.319-12.223-3.194a251.181,251.181,0,0,0-24.865-4.494h-.007a.232.232,0,0,1,.063-.459Z"/>
+        <polygon class="cls-9" points="454.426 118.349 454.69 117.564 459.833 119.293 457.005 114.663 457.712 114.232 461.725 120.804 454.426 118.349"/>
+      </g>
+    </g>
+    <g id="MainG">
+      <path class="cls-10" d="M75.948,159.492a526.29,526.29,0,0,1,87.744-23.083A462.521,462.521,0,0,1,344.2,140.732a527.85,527.85,0,0,1,86.521,27.2,527.462,527.462,0,0,0-86.653-26.593,486.881,486.881,0,0,0-89.924-10.786,478.013,478.013,0,0,0-90.306,6.7,525.513,525.513,0,0,0-87.689,22.8Z"/>
+    </g>
+    <g id="StartPt-Dots">
+      <use width="5.201" height="5.201" transform="translate(363.705 81.429)" xlink:href="#Red_dot"/>
+    </g>
+    <g id="RefPt-Dots">
+      <use width="5.201" height="5.201" transform="translate(311.954 71.964)" xlink:href="#Blue_Point"/>
+      <use width="5.201" height="5.201" transform="translate(206.384 68.202)" xlink:href="#Blue_Point"/>
+      <use width="5.201" height="5.201" transform="translate(154.148 74.239)" xlink:href="#Blue_Point"/>
+      <use width="5.201" height="5.201" transform="translate(103.015 85.068)" xlink:href="#Blue_Point"/>
+      <use width="5.201" height="5.201" transform="translate(53.259 100.341)" xlink:href="#Blue_Point"/>
+      <use width="5.201" height="5.201" transform="translate(413.632 95.856)" xlink:href="#Blue_Point"/>
+      <use id="Blue_Point-15" data-name="Blue Point" width="5.201" height="5.201" transform="translate(259.336 67.381)" xlink:href="#Blue_Point"/>
+    </g>
+    <g id="Arrows">
+      <g>
+        <line class="cls-11" x1="249.835" y1="128.534" x2="251.917" y2="71.111"/>
+        <path d="M249.841,128.373a2.952,2.952,0,0,0-1.794-.7,5.439,5.439,0,0,1,1.736,2.283,5.759,5.759,0,0,1,1.9-2.152A3.053,3.053,0,0,0,249.841,128.373Z"/>
+        <path d="M251.911,71.272a2.951,2.951,0,0,1-1.84.567,5.451,5.451,0,0,0,1.9-2.151,5.759,5.759,0,0,0,1.737,2.283A3.05,3.05,0,0,1,251.911,71.272Z"/>
+      </g>
+      <g>
+        <line class="cls-11" x1="252.175" y1="63.991" x2="252.02" y2="68.265"/>
+        <path d="M252.169,64.152a2.947,2.947,0,0,0,1.794.7,5.455,5.455,0,0,1-1.737-2.283,5.745,5.745,0,0,1-1.9,2.151A3.059,3.059,0,0,0,252.169,64.152Z"/>
+        <path d="M252.026,68.1a2.949,2.949,0,0,1,1.839-.568,5.454,5.454,0,0,0-1.9,2.152,5.743,5.743,0,0,0-1.736-2.283A3.052,3.052,0,0,1,252.026,68.1Z"/>
+      </g>
+    </g>
+    <g id="Text">
+      <text class="cls-12" transform="translate(240.564 98.457)">w</text>
+      <text class="cls-12" transform="translate(243.036 69.982)">ε</text>
+      <text class="cls-12" transform="translate(282.329 72.466)">g</text>
+      <text class="cls-13" transform="translate(288.329 75.463) scale(0.583)">+</text>
+      <text class="cls-12" transform="translate(281.566 141.123)">g</text>
+      <text class="cls-12" transform="translate(368.689 93.335)">p</text>
+      <text class="cls-13" transform="translate(374.689 96.332) scale(0.583)">i</text>
+      <text class="cls-12" transform="translate(322.488 90.123)">θ</text>
+      <text class="cls-14" transform="translate(297.659 47.514)">v</text>
+      <text class="cls-13" transform="translate(303.659 50.511) scale(0.583)">i</text>
+      <text class="cls-12" transform="translate(417.852 108.241)">p</text>
+      <text class="cls-13" transform="translate(423.852 111.238) scale(0.583)">0</text>
+      <text class="cls-12" transform="translate(63.354 110.459)">p</text>
+      <text class="cls-13" transform="translate(69.354 113.456) scale(0.583)">N</text>
+      <g>
+        <path class="cls-15" d="M333.569,95.252a34.59,34.59,0,0,1,21.507-43.234"/>
+        <rect x="332.762" y="95.121" width="1.625" height="0.25" transform="translate(-13.265 88.47) rotate(-14.817)"/>
+        <rect x="354.952" y="51.212" width="0.25" height="1.625" transform="translate(6.902 138.975) rotate(-22.357)"/>
+      </g>
+    </g>
+  </g>
+</svg>

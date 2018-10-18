@@ -1,6 +1,106 @@
 [
   
     {
+      "title"    : "About me",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/about.html",
+      "date"     : "2018"
+    } ,
+  
+    {
+      "title"    : "Blog",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/blog.html",
+      "date"     : "2018"
+    } ,
+  
+    {
+      "title"    : "Feed",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/feed.xml",
+      "date"     : ""
+    } ,
+  
+    {
+      "title"    : "Alan Rynne",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/index.html",
+      "date"     : "2018"
+    } ,
+  
+    {
+      "title"    : "Projects",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/projects.html",
+      "date"     : "2018"
+    } ,
+  
+    {
+      "title"    : "Series",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/series.html",
+      "date"     : "2018"
+    } ,
+  
+    {
+      "title"    : "#Tags",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/tags.html",
+      "date"     : "2018"
+    } ,
+   
+
+  
+  {
+    "title"    : "Chebyshev Net Grasshopper Component",
+    "category" : "",
+    "tags"     : "",
+    "url"      : "/projects/2017-12-chebyshevnet",
+    "date"     : "October 2018"
+  } ,
+  
+  {
+    "title"    : "Cutty Sark Pavilion",
+    "category" : "",
+    "tags"     : "",
+    "url"      : "/projects/2018-02-cuttysark",
+    "date"     : "February 2018"
+  } ,
+  
+  {
+    "title"    : "Triangular Chebychev Gridshell",
+    "category" : "",
+    "tags"     : "",
+    "url"      : "/projects/2018-06-elasticgridshell",
+    "date"     : "October 2018"
+  } ,
+  
+  {
+    "title"    : "Geodesic Patterns",
+    "category" : "",
+    "tags"     : "",
+    "url"      : "/projects/2018-09-geodesicpatterns",
+    "date"     : "October 2018"
+  } ,
+  
+  {
+    "title"    : "C# Geometry Library",
+    "category" : "",
+    "tags"     : "",
+    "url"      : "/projects/2018-10-geometrylibraryc",
+    "date"     : "October 2018"
+  } ,
+   
+
+  
+    {
       "title"    : "Surfaces vs. Meshes",
       "category" : "General",
       "tags"     : "jekyll and template",
@@ -16,5 +116,5 @@
       "date"     : "03 Aug 2015"
     } 
   
-  
+
 ]
