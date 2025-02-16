@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --default-font-family: 'JetBrains Mono', monospace;
+}
+
+#app  {
+  @apply bg-gray-200
+  text-gray-800 
+  dark:bg-gray-800
+  dark:text-gray-100;
+}
+
+#root {
+  @apply grid
+    gap-10
+    lg:min-h-screen
+    justify-center
+    lg:max-w-7xl
+    lg:grid-cols-[40%_60%]
+    lg:mx-auto lg:my-0
+    md:m-10
+    px-2
+    m-3;
+}
+
+#root.wide-layout {
+  @apply lg:grid-cols-[20%_80%];
+}
+
+#root:not(.wide-layout) {
+  @apply lg:grid-cols-[40%_60%];
+}
