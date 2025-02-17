@@ -1,29 +1,59 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
 @import 'tailwindcss';
 
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
   --default-font-family: 'JetBrains Mono', monospace;
+  --primary: 'red';
+  --secondary: 'green';
 }
 
 #app  {
-  @apply bg-gray-200
-  text-gray-800 
-  dark:bg-gray-800
-  dark:text-gray-100;
+  @apply text-gray-800 
+  dark:text-gray-100
+  min-h-screen
+  not-lg:absolute;
+
+  background-color: var(--color-gray-100);
+  background-image:
+    linear-gradient(var(--color-gray-100) 2px, transparent 2px),
+    linear-gradient(90deg, var(--color-gray-100) 2px, transparent 2px),
+    linear-gradient(var(--color-gray-100) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-gray-100) 1px, var(--color-white) 1px);
+  background-size:
+    50px 50px,
+    50px 50px,
+    10px 10px,
+    10px 10px; 
+  background-position:
+    -2px -2px,
+    -2px -2px,
+    -1px -1px,
+    -1px -1px;
+
+  &:where(.dark, .dark *) {
+    background-color: var(--color-gray-800) /* oklch(0.278 0.033 256.848) = #1e2939 */;
+    background-image:
+      linear-gradient(var(--color-gray-800) 2px, transparent 2px),
+      linear-gradient(90deg, var(--color-gray-800) 2px, transparent 2px),
+      linear-gradient(var(--color-gray-800) 1px, transparent 1px),
+      linear-gradient(90deg, var(--color-gray-800) 1px, var(--color-gray-900) 1px);
+  }
 }
 
 #root {
-  @apply grid
+  @apply flex flex-col lg:grid
     gap-10
+    min-h-full
     lg:min-h-screen
-    justify-center
-    lg:max-w-7xl
+    lg:justify-center
+    lg:max-w-5xl
     lg:grid-cols-[40%_60%]
-    lg:mx-auto lg:my-0
+    lg:mx-auto 
+    lg:my-0
     md:m-10
-    px-2
     m-3;
 }
 
@@ -32,5 +62,5 @@
 }
 
 #root:not(.wide-layout) {
-  @apply lg:grid-cols-[40%_60%];
+  @apply lg:grid-cols-[50%_50%];
 }

@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import PersonalIntro from '@/components/PersonalIntro.vue'
-import SimpleNav from '@/components/SimpleNav.vue'
 import SocialNav from '@/components/SocialNav.vue'
 import { computed, watch } from 'vue'
 import { useThemeStore } from '@/stores/useThemeStore.ts'
@@ -24,10 +23,10 @@ watch(
 <template>
   <div id="root" :class="{ 'wide-layout': isWideLayout }">
     <header
-      class="lg:sticky lg:top-0 flex flex-col gap-10 p-10 lg:px-10 lg:py-30 lg:max-h-screen shrink"
+      class="lg:sticky lg:top-0 flex flex-col gap-10 p-10 lg:px-10 lg:py-60 lg:max-h-screen shrink"
     >
       <PersonalIntro />
-      <SimpleNav />
+      <!-- <SimpleNav /> -->
       <social-nav />
     </header>
     <main class="lg:my-20">

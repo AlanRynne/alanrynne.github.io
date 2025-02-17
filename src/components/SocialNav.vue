@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="group transition-all flex justify-start space-x-4 items-center align-middle text-xl lg:mt-auto"
-  >
+  <div class="group flex justify-start space-x-4 items-center align-middle text-xl lg:mt-auto">
     <a
       v-for="social in socials"
       :key="social.url"
@@ -11,7 +9,8 @@
     >
       <FontAwesomeIcon
         :icon="social.icon"
-        :class="{ 'text-sm': layoutStore.isWide, [`${social.hoverColor}`]: true }"
+        class="hover:dark:text-amber-400 hover:text-amber-600 text-primary"
+        :class="{ 'text-sm': layoutStore.isWide }"
       />
     </a>
     <span> | </span>
