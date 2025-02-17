@@ -10,7 +10,6 @@ export default defineConfig({
   plugins: [vue(), vueDevTools(), tailwindcss()],
   resolve: {
     alias: {
-      // eslint-disable-next-line @typescript-eslint/naming-convention
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
