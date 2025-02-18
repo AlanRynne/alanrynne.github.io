@@ -29,6 +29,10 @@ const router = createRouter({
       component: ContactView,
       meta: { wideLayout: true },
     },
+    {
+      path: '/:pathMatch(.*)*',
+      redirect: '/',
+    },
   ],
 })
 
