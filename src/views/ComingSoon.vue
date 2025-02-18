@@ -12,7 +12,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
         class="mt-3 w-full bg-gray-100 dark:bg-gray-900 border-t flex flex-col justify-center items-center p-10"
       >
         <FontAwesomeIcon class="text-[60pt] pb-4" :icon="faWarning" />
-        <h1 class="text-2xl font-light">New site coming Soon!</h1>
+        <h1 class="text-xl font-light">New site coming Soon!</h1>
       </div>
     </div>
   </div>

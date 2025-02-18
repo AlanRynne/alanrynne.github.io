@@ -26,7 +26,7 @@
     50px 50px,
     50px 50px,
     10px 10px,
-    10px 10px; 
+    10px 10px;
   background-position:
     -2px -2px,
     -2px -2px,
@@ -45,7 +45,8 @@
 
 #root {
   @apply flex flex-col lg:grid
-    gap-10
+    gap-5
+    lg:gap-10
     min-h-full
     lg:min-h-screen
     lg:justify-center
