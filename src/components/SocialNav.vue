@@ -44,27 +44,27 @@ function onLightModeToggleClick() {
 
 const socials = [
   {
+    url: 'mailto:alan@rynne.dev',
+    icon: faEnvelope,
+    hoverColor: '',
+  },
+  {
     url: 'https://github.com/alanrynne',
     icon: faGithub,
-    hoverColor: 'group-hover:text-gray-400',
-  },
-  {
-    url: 'https://github.com/alanrynne',
-    icon: faEnvelope,
-    hoverColor: 'group-hover:text-amber-700',
-  },
-  {
-    url: 'https://twitter.com/alanrynne',
-    icon: faXTwitter,
-    hoverColor: 'group-hover:text-blue-500',
-  },
-  {
-    url: 'https://linkedin.com/in/alanrynne',
-    icon: faLinkedinIn,
     hoverColor: '',
   },
   {
     url: 'https://twitter.com/alanrynne',
+    icon: faXTwitter,
+    hoverColor: '',
+  },
+  {
+    url: 'https://linkedin.com/in/alanrynnevidal',
+    icon: faLinkedinIn,
+    hoverColor: '',
+  },
+  {
+    url: 'https://bsky.app/profile/alan.rynne.dev',
     icon: faBluesky,
     hoverColor: '',
   },
