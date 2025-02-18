@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  build:
+  build_and_deploy:
     runs-on: ubuntu-latest
     environment: Google Cloud
     steps:
@@ -21,6 +21,7 @@ jobs:
 
       - name: Build project
         run: npm run build
+        
       - uses: google-github-actions/auth@v2
         with:
           project_id: '${{ secrets.GCP_PROJECT }}'
