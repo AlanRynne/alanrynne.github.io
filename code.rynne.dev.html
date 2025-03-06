@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alan Rynne | Code</title>
+  <meta name="description" content="Software Engineer & CAD Specialist">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@3.2.31/dist/vue.global.prod.js"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              blue: '#0047AB',
+              red: '#FF0000',
+              yellow: '#FFFF00',
+            },
+          },
+          animation: {
+            'float': 'float 6s ease-in-out infinite',
+            'spin-slow': 'spin 8s linear infinite',
+            'ping-slow': 'ping 3s cubic-bezier(0, 0, 0.2, 1) infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-20px)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body class="antialiased transition-colors duration-300" :class="{'dark': isDarkMode}">
+  <div id="app" class="h-screen w-screen overflow-hidden bg-white dark:bg-gray-900 transition-colors duration-500">
+    <!-- Background Elements -->
+    <div class="fixed inset-0 grid-pattern opacity-70 dark:opacity-30"></div>
+    
+    <div class="absolute top-0 left-0 w-full h-full overflow-hidden">
+      <!-- Animated geometric elements -->
+      <div class="absolute top-[10%] left-[15%] w-40 h-40 bg-blue-500/30 dark:bg-blue-600/30 rounded-full blur-3xl animate-ping-slow"></div>
+      <div class="absolute bottom-[20%] right-[10%] w-64 h-64 bg-red-500/20 dark:bg-red-600/20 rounded-full blur-3xl animate-float"></div>
+      <div class="absolute top-[40%] right-[20%] w-32 h-32 bg-yellow-400/20 dark:bg-yellow-500/20 rounded-full blur-3xl animate-spin-slow"></div>
+      
+      <!-- Code elements -->
+      <div class="hidden lg:block absolute bottom-[10%] left-[5%] text-4xl font-mono text-gray-300/30 dark:text-gray-500/20 transform -rotate-12">
+        <pre class="animate-float">
+function animate() {
+  requestAnimationFrame(animate);
+  render();
+}
+        </pre>
+      </div>
+      
+      <!-- CAD wireframe elements -->
+      <svg class="absolute top-[15%] right-[5%] w-64 h-64 text-gray-300 dark:text-gray-700 animate-float" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="0.5">
+        <polygon points="50,10 90,30 90,70 50,90 10,70 10,30" />
+        <line x1="50" y1="10" x2="50" y2="90" />
+        <line x1="10" y1="30" x2="90" y2="30" />
+        <line x1="10" y1="70" x2="90" y2="70" />
+        <line x1="10" y1="30" x2="50" y2="90" />
+        <line x1="90" y1="30" x2="50" y2="90" />
+      </svg>
+    </div>
+    
+    <!-- Header with theme toggle -->
+    <header class="relative z-10 flex justify-between items-center p-6">
+      <a href="/" class="flex items-center">
+        <span class="text-2xl font-bold text-gray-900 dark:text-white">code<span class="text-primary-blue dark:text-blue-400">.rynne.dev</span></span>
+      </a>
+      
+      <div class="flex items-center space-x-4">
+        <button @click="toggleTheme" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <svg v-if="isDarkMode" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+          <svg v-else xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+        </button>
+      </div>
+    </header>
+    
+    <!-- Main content -->
+    <main class="relative z-10 h-full flex items-center justify-center px-6">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold mb-6">
+          <span class="block bg-gradient-to-r from-primary-blue to-blue-600 dark:from-blue-400 dark:to-blue-600 text-gradient">Build. Create. Code.</span>
+        </h1>
+        <p class="text-xl sm:text-2xl font-light max-w-2xl mx-auto mb-10 text-gray-700 dark:text-gray-300">
+          Software engineering and CAD development with a focus on geometry and creative exploration.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
+          <a href="#projects" class="px-8 py-3 bg-primary-blue hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-300 transform hover:scale-105">
+            View Projects
+          </a>
+          <a href="https://github.com/alanrynne" class="px-8 py-3 bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-900 dark:text-gray-100 font-medium rounded-lg transition-colors duration-300 transform hover:scale-105">
+            GitHub Profile
+          </a>
+        </div>
+      </div>
+    </main>
+    
+    <!-- Footer with minimal info -->
+    <footer class="relative z-10 absolute bottom-0 w-full p-6 text-center text-gray-600 dark:text-gray-400">
+      <p>© 2023 Alan Rynne. All rights reserved.</p>
+    </footer>
+  </div>
+  
+  <!-- Load external JS file -->
+  <script src="./js/theme.js"></script>
+</body>
+</html>
