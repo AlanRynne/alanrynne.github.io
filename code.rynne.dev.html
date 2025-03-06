@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,14 +22,33 @@
           },
           animation: {
             'float': 'float 6s ease-in-out infinite',
+            'float-reverse': 'float-reverse 7s ease-in-out infinite',
             'spin-slow': 'spin 8s linear infinite',
+            'spin-slower': 'spin 15s linear infinite',
             'ping-slow': 'ping 3s cubic-bezier(0, 0, 0.2, 1) infinite',
+            'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'bounce-slow': 'bounce 3s infinite',
           },
           keyframes: {
             float: {
               '0%, 100%': { transform: 'translateY(0)' },
               '50%': { transform: 'translateY(-20px)' },
+            },
+            'float-reverse': {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(20px)' },
             }
+          },
+          // Add animation delay utilities
+          animationDelay: {
+            '200': '200ms',
+            '400': '400ms',
+            '600': '600ms',
+            '800': '800ms',
+            '1000': '1000ms',
+            '1500': '1500ms',
+            '2000': '2000ms',
+            '3000': '3000ms',
           }
         }
       }
@@ -36,29 +56,52 @@
   </script>
   <link rel="stylesheet" href="./css/styles.css">
 </head>
+
 <body class="antialiased transition-colors duration-300" :class="{'dark': isDarkMode}">
   <div id="app" class="h-screen w-screen overflow-hidden bg-white dark:bg-gray-900 transition-colors duration-500">
     <!-- Background Elements -->
     <div class="fixed inset-0 grid-pattern opacity-70 dark:opacity-30"></div>
-    
+
     <div class="absolute top-0 left-0 w-full h-full overflow-hidden">
       <!-- Animated geometric elements -->
       <div class="absolute top-[10%] left-[15%] w-40 h-40 bg-blue-500/30 dark:bg-blue-600/30 rounded-full blur-3xl animate-ping-slow"></div>
-      <div class="absolute bottom-[20%] right-[10%] w-64 h-64 bg-red-500/20 dark:bg-red-600/20 rounded-full blur-3xl animate-float"></div>
+
+      <!-- Mouse-following red circle - updated for better performance -->
+      <div class="absolute w-64 h-64 bg-red-500/20 dark:bg-red-600/30 rounded-full blur-3xl mouse-follow" :style="{ transform: `translate3d(${mouseX - 128}px, ${mouseY - 128}px, 0)` }">
+      </div>
+
       <div class="absolute top-[40%] right-[20%] w-32 h-32 bg-yellow-400/20 dark:bg-yellow-500/20 rounded-full blur-3xl animate-spin-slow"></div>
-      
+
+      <!-- Additional animated elements -->
+      <div class="absolute top-[60%] left-[30%] w-24 h-24 bg-green-500/20 dark:bg-green-400/20 rounded-full blur-xl animate-pulse-slow"></div>
+      <div class="absolute top-[20%] left-[60%] w-16 h-16 bg-purple-500/20 dark:bg-purple-400/20 rounded-full blur-xl animate-bounce-slow"></div>
+
+      <!-- Binary code background element -->
+      <div class="block absolute top-[5%] left-[75%] text-xs font-mono text-gray-300/10 dark:text-gray-500/10 transform rotate-12 animate-float-reverse delay-1000">
+        <pre>
+01001100 01101111 01110010 01100101 01101101 
+00100000 01101001 01110000 01110011 01110101 
+01101101 00100000 01100100 01101111 01101100 
+01101111 01110010 00100000 01110011 01101001 
+01110100 00100000 01100001 01101101 01100101 
+01110100 00101100 00100000 01100011 01101111 
+01101110 01110011 01100101 01100011 01110100 
+01100101 01110100 01110101 01110010 00100000 
+        </pre>
+      </div>
+
       <!-- Code elements -->
-      <div class="hidden lg:block absolute bottom-[10%] left-[5%] text-4xl font-mono text-gray-300/30 dark:text-gray-500/20 transform -rotate-12">
-        <pre class="animate-float">
+      <div class="block absolute bottom-[10%] left-[5%] lg:text-4xl text-2xl font-mono text-gray-300/30 dark:text-gray-500/20 transform -rotate-12 animate-float delay-500">
+        <pre>
 function animate() {
   requestAnimationFrame(animate);
   render();
 }
         </pre>
       </div>
-      
+
       <!-- CAD wireframe elements -->
-      <svg class="absolute top-[15%] right-[5%] w-64 h-64 text-gray-300 dark:text-gray-700 animate-float" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="0.5">
+      <svg class="absolute top-[15%] right-[5%] w-64 h-64 text-gray-300 dark:text-gray-700 animate-float delay-800" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="0.5">
         <polygon points="50,10 90,30 90,70 50,90 10,70 10,30" />
         <line x1="50" y1="10" x2="50" y2="90" />
         <line x1="10" y1="30" x2="90" y2="30" />
@@ -66,14 +109,25 @@ function animate() {
         <line x1="10" y1="30" x2="50" y2="90" />
         <line x1="90" y1="30" x2="50" y2="90" />
       </svg>
+
+      <!-- Additional geometric SVG -->
+      <svg class="hidden md:block absolute bottom-[15%] right-[15%] w-40 h-40 text-gray-400/20 dark:text-gray-600/20 animate-spin-slower" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="0.8">
+        <circle cx="50" cy="50" r="40" />
+        <circle cx="50" cy="50" r="30" />
+        <circle cx="50" cy="50" r="20" />
+        <line x1="10" y1="50" x2="90" y2="50" />
+        <line x1="50" y1="10" x2="50" y2="90" />
+        <line x1="20" y1="20" x2="80" y2="80" />
+        <line x1="20" y1="80" x2="80" y2="20" />
+      </svg>
     </div>
-    
+
     <!-- Header with theme toggle -->
-    <header class="relative z-10 flex justify-between items-center p-6">
+    <header class="relative z-10 flex justify-between items-center p-6 absolute top-0 left-0 right-0">
       <a href="/" class="flex items-center">
         <span class="text-2xl font-bold text-gray-900 dark:text-white">code<span class="text-primary-blue dark:text-blue-400">.rynne.dev</span></span>
       </a>
-      
+
       <div class="flex items-center space-x-4">
         <button @click="toggleTheme" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500">
           <svg v-if="isDarkMode" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -85,10 +139,10 @@ function animate() {
         </button>
       </div>
     </header>
-    
-    <!-- Main content -->
-    <main class="relative z-10 h-full flex items-center justify-center px-6">
-      <div class="max-w-4xl mx-auto text-center">
+
+    <!-- Main content - now absolutely centered -->
+    <main class="absolute inset-0 flex items-center justify-center z-10 px-6 pointer-events-none">
+      <div class="max-w-4xl mx-auto text-center p-8 rounded-xl pointer-events-auto">
         <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold mb-6">
           <span class="block bg-gradient-to-r from-primary-blue to-blue-600 dark:from-blue-400 dark:to-blue-600 text-gradient">Build. Create. Code.</span>
         </h1>
@@ -96,23 +150,24 @@ function animate() {
           Software engineering and CAD development with a focus on geometry and creative exploration.
         </p>
         <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
-          <a href="#projects" class="px-8 py-3 bg-primary-blue hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-300 transform hover:scale-105">
+          <a href="#projects" class="px-8 py-3 bg-primary-blue hover:bg-blue-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
             View Projects
           </a>
-          <a href="https://github.com/alanrynne" class="px-8 py-3 bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-900 dark:text-gray-100 font-medium rounded-lg transition-colors duration-300 transform hover:scale-105">
+          <a href="https://github.com/alanrynne" class="px-8 py-3 bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-900 dark:text-gray-100 font-medium rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
             GitHub Profile
           </a>
         </div>
       </div>
     </main>
-    
+
     <!-- Footer with minimal info -->
-    <footer class="relative z-10 absolute bottom-0 w-full p-6 text-center text-gray-600 dark:text-gray-400">
-      <p>© 2023 Alan Rynne. All rights reserved.</p>
+    <footer class="z-10 absolute bottom-0 left-0 right-0 p-6 text-center text-gray-600 dark:text-gray-400">
+      <p>© 2025 Alan Rynne Vidal. All rights reserved.</p>
     </footer>
   </div>
-  
+
   <!-- Load external JS file -->
   <script src="./js/theme.js"></script>
 </body>
+
 </html>
