@@ -251,10 +251,71 @@ class Collectible {
   }
 }
 
+class Particle {
+  constructor(x, y, color, velocity) {
+    this.x = x;
+    this.y = y;
+    this.color = color;
+    this.velocity = velocity || new Vector2(Math.random() * 2 - 1, Math.random() * -2 - 1);
+    this.life = 30;
+    this.maxLife = 30;
+    this.size = Math.random() * 2 + 1;
+  }
+  
+  update() {
+    this.x += this.velocity.x;
+    this.y += this.velocity.y;
+    this.velocity.y += 0.1; // gravity
+    this.life--;
+  }
+  
+  render(ctx, palette) {
+    if (this.life > 0) {
+      const alpha = this.life / this.maxLife;
+      ctx.fillStyle = this.color;
+      ctx.fillRect(this.x, this.y, this.size, this.size);
+    }
+  }
+  
+  isDead() {
+    return this.life <= 0;
+  }
+}
+
+class ParticleSystem {
+  constructor() {
+    this.particles = [];
+  }
+  
+  addParticles(x, y, count, color) {
+    for (let i = 0; i < count; i++) {
+      this.particles.push(new Particle(x, y, color));
+    }
+  }
+  
+  update() {
+    for (let i = this.particles.length - 1; i >= 0; i--) {
+      this.particles[i].update();
+      if (this.particles[i].isDead()) {
+        this.particles.splice(i, 1);
+      }
+    }
+  }
+  
+  render(ctx, palette) {
+    for (let particle of this.particles) {
+      particle.render(ctx, palette);
+    }
+  }
+}
+
 class RetroGame {
   constructor(canvasId) {
     this.canvas = document.getElementById(canvasId);
     this.ctx = this.canvas.getContext('2d');
+    
+    // Initialize audio system
+    this.audio = new RetroAudio();
     
     // Game Boy resolution scaled up
     this.gameWidth = 160;
@@ -290,6 +351,9 @@ class RetroGame {
     this.targetFPS = 60;
     this.frameTime = 1000 / this.targetFPS;
     
+    // Particle system
+    this.particles = new ParticleSystem();
+    
     // Input handling
     this.keys = {};
     this.setupInput();
@@ -302,6 +366,13 @@ class RetroGame {
   setupInput() {
     document.addEventListener('keydown', (e) => {
       this.keys[e.code] = true;
+      
+      // Handle sound toggle
+      if (e.code === 'KeyM') {
+        const soundEnabled = this.audio.toggleSound();
+        console.log('Sound ' + (soundEnabled ? 'enabled' : 'disabled'));
+      }
+      
       e.preventDefault();
     });
     
@@ -341,22 +412,42 @@ class RetroGame {
   updateMenu() {
     // Start game when space is pressed
     if (this.keys['Space']) {
+      this.audio.playMenuSound();
       this.gameState = 'playing';
       this.initializeGame();
+      // Start background music
+      setTimeout(() => this.audio.playBackgroundMusic(), 500);
     }
   }
   
   updateGame(deltaTime) {
     // Game logic
     if (this.keys['Escape']) {
+      this.audio.playPauseSound();
       this.gameState = 'paused';
       return;
     }
     
     // Update player
     if (this.player) {
+      const wasGrounded = this.player.grounded;
       this.player.update(this.keys, this.platforms);
+      
+      // Play jump sound when player jumps
+      if (wasGrounded && !this.player.grounded && this.player.velocity.y < 0) {
+        this.audio.playJumpSound();
+        // Add jump particles
+        this.particles.addParticles(
+          this.player.position.x + this.player.size.x / 2,
+          this.player.position.y + this.player.size.y,
+          3,
+          this.palette.light
+        );
+      }
     }
+    
+    // Update particles
+    this.particles.update();
     
     // Update collectibles
     for (let collectible of this.collectibles) {
@@ -364,7 +455,17 @@ class RetroGame {
       
       // Check if player collected something
       if (collectible.checkCollision(this.player)) {
+        this.audio.playCollectSound();
         this.score += 100;
+        
+        // Add collection particles
+        this.particles.addParticles(
+          collectible.x,
+          collectible.y,
+          8,
+          this.palette.lightest
+        );
+        
         const info = this.infoDatabase[collectible.type];
         if (info && !this.discoveredInfo.includes(info)) {
           this.discoveredInfo.push(info);
@@ -374,12 +475,21 @@ class RetroGame {
     
     // Check win condition
     if (this.discoveredInfo.length >= 4) {
+      this.audio.playVictorySound();
+      // Victory particles
+      this.particles.addParticles(
+        this.gameWidth / 2,
+        this.gameHeight / 2,
+        20,
+        this.palette.lightest
+      );
       this.gameState = 'gameOver';
     }
   }
   
   updatePause() {
     if (this.keys['Escape']) {
+      this.audio.playMenuSound();
       this.gameState = 'playing';
     }
   }
@@ -455,6 +565,9 @@ class RetroGame {
     if (this.player) {
       this.player.render(this.ctx, this.palette);
     }
+    
+    // Render particles
+    this.particles.render(this.ctx, this.palette);
     
     // Render UI
     this.renderUI();
